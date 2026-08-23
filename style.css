@@ -1,0 +1,212 @@
+/* ========================================
+   BOOPIXEL - ESTILOS PRINCIPALES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(132, 0, 255, 0.18), transparent 35%),
+        radial-gradient(circle at 10% 70%, rgba(92, 32, 255, 0.12), transparent 35%),
+        #080510;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    padding: 24px 8%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(8, 5, 16, 0.85);
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #ffffff, #b56cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CONTENIDO */
+
+main {
+    width: 100%;
+}
+
+main > section:first-child {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+main > section:first-child::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -100px;
+    top: 40px;
+    border-radius: 50%;
+    background: #7200ff;
+    filter: blur(160px);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+main > section:first-child h2 {
+    max-width: 850px;
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+main > section:first-child p {
+    max-width: 650px;
+    color: #c5bdd1;
+    font-size: 20px;
+    margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+/* BOTÓN PRINCIPAL */
+
+main > section:first-child a {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7c21ff, #a94cff);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 10px 35px rgba(124, 33, 255, 0.35);
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+main > section:first-child a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 45px rgba(169, 76, 255, 0.5);
+}
+
+/* SERVICIOS */
+
+#servicios {
+    padding: 90px 8%;
+    background: rgba(255, 255, 255, 0.015);
+}
+
+#servicios > h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+#servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+#servicios > h2 {
+    flex-basis: 100%;
+}
+
+#servicios article {
+    flex: 1 1 280px;
+    max-width: 380px;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(173, 102, 255, 0.2);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.07),
+        rgba(255, 255, 255, 0.02)
+    );
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+#servicios article:hover {
+    transform: translateY(-8px);
+    border-color: rgba(173, 102, 255, 0.7);
+    box-shadow: 0 20px 50px rgba(91, 0, 190, 0.2);
+}
+
+#servicios article h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+#servicios article p {
+    color: #bdb5c8;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 8%;
+    text-align: center;
+    color: #81798d;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    background: #06040c;
+}
+
+/* CELULARES */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 6%;
+    }
+
+    main > section:first-child {
+        min-height: 75vh;
+        padding: 70px 6%;
+    }
+
+    main > section:first-child h2 {
+        font-size: 44px;
+        letter-spacing: -2px;
+    }
+
+    main > section:first-child p {
+        font-size: 17px;
+    }
+
+    #servicios {
+        padding: 70px 6%;
+    }
+
+    #servicios > h2 {
+        font-size: 34px;
+    }
+
+    #servicios article {
+        max-width: 100%;
+    }
+}
