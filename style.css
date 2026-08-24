@@ -61,15 +61,34 @@ main {
 
 main > section:first-child {
     min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 40px;
     padding: 80px 8%;
     position: relative;
     overflow: hidden;
 }
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
 
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 35px rgba(132, 0, 255, 0.45));
+}
 main > section:first-child::after {
     content: "";
     position: absolute;
